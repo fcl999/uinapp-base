@@ -1,0 +1,152 @@
+@import "uni.scss";
+/* 文本颜色 */
+@import "text-color.scss";
+/* 背景颜色 */
+@import "bg-color.scss";
+/* 安全区域 */
+.safe-padding {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: content-box;
+}
+/* 定位 */
+.relative{
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.fixed{
+    position: fixed;
+}
+.absolute{
+    position: absolute;
+}
+.sticky{
+    position: sticky;
+    /* #ifdef MP-WEIXIN */
+    top: env(safe-area-inset-top);
+    /* #endif */
+    /* #ifndef MP-WEIXIN */ //不使用原生导航栏时需要加导航栏高度
+    top: calc(44px + env(safe-area-inset-top));
+    /* #endif */
+
+}
+.view-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.view-y-center{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.view-x-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 文本对齐 */
+.text-center {
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+/* 文本样式 */
+.text-underline{
+    text-decoration: underline;
+}
+.hover-transparent:hover{
+    color: transparent;
+}
+.bold{
+    font-weight: bold;
+}
+.nowrap{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 边框样式 */
+.border-b{
+    border-bottom: 1px solid #F0F0F0 ;
+}
+/*box*/
+.border-box{
+    box-sizing: border-box;
+}
+.overflow-hidden{
+ overflow: hidden;
+}
+.inline-block{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.inline{
+    display: inline;
+}
+/* 宽度 高度 */
+.w-full {
+    width: 100%;
+}
+.w-screen-width {
+    width: 100vw;
+}
+.w{
+    width: 1px;
+}
+.w-1 {
+    width: 4rpx;
+}
+.w-2 {
+    width: 8rpx;
+}
+.w-4 {
+    width: 16rpx;
+}
+.w-8 {
+    width: 32rpx;
+}
+.w-12 {
+    width: 48rpx;
+}
+.w-16 {
+    width: 64rpx;
+}
+.w-32 {
+    width: 128rpx;
+}
+.h-full {
+    height: 100%;
+}
+.h-screen-height{
+    height: 100vh;
+}
+.h-screen-width {
+    height: 100vw;
+}
+.h-4 {
+     height: 16rpx;
+ }
+.h-8 {
+    height: 32rpx;
+}
+.h-12 {
+    height: 48rpx;
+}
+.h-16 {
+    height: 64rpx;
+}
+.h-32 {
+    height: 128rpx;
+}
